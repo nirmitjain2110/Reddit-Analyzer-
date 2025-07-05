@@ -93,22 +93,18 @@ from reportlab.lib.units import inch
 from textwrap import wrap
 import os
 
-# Basic info
 pdf_filename = f"Reddit_Report_{subreddit_name}.pdf"
 c = canvas.Canvas(pdf_filename, pagesize=A4)
 width, height = A4
 
-# --- Title ---
 c.setFont("Helvetica-Bold", 18)
 c.drawString(50, height - 50, f"Reddit Sentiment Report: r/{subreddit_name}")
 
-# --- Sentiment Count ---
 c.setFont("Helvetica", 12)
 c.drawString(50, height - 90, f"Positive Posts: {positive_count}")
 c.drawString(50, height - 110, f"Neutral Posts: {neutral_count}")
 c.drawString(50, height - 130, f"Negative Posts: {negative_count}")
 
-# --- Insert Pie Chart Image ---
 image_path = "sentiment_chart.png"
 if os.path.exists(image_path):
     c.drawImage(image_path, 50, height - 400, width=400, height=250)
@@ -116,17 +112,15 @@ else:
     c.setFont("Helvetica-Oblique", 10)
     c.drawString(50, height - 400, "⚠️ Chart image not found!")
 
-# --- Summary ---
 c.setFont("Helvetica-Bold", 14)
 c.drawString(50, height - 420, "Summary of Top Comments:")
 
 c.setFont("Helvetica", 11)
 
-# Wrap text to avoid overflow
 wrapped_summary = wrap(summary, width=100)
 y = height - 440
 for line in wrapped_summary:
-    if y < 50:  # go to next page if too low
+    if y < 50: 
         c.showPage()
         y = height - 50
         c.setFont("Helvetica", 11)
