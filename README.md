@@ -1,11 +1,11 @@
-**Reddit Sentiment Tracker with GenAI Summarization & PDF Report
+**Reddit Sentiment Tracker with GenAI Summarization & PDF Report**
 
 A Python-based application that performs sentiment analysis on the top Reddit posts from any subreddit, generates a visual sentiment distribution chart, summarizes top comments using a pre-trained GenAI model, and compiles a professional PDF report of the analysis.
 
 ---
 
 
-Features
+**Features**
 
 - Fetches top 10 posts from any user-specified subreddit using Reddit API (`praw`)
 - Analyzes sentiment (Positive, Neutral, Negative) of post titles using VADER
@@ -16,7 +16,7 @@ Features
 
 ---
 
- Tech Stack
+**Tech Stack**
 
 | Tool/Library      | Purpose                                 |
 |------------------|-----------------------------------------|
@@ -30,7 +30,7 @@ Features
 
 ---
 
-Installation
+**Installation**
 
 pip install praw vaderSentiment plotly pdfkit transformers reportlab kaleido==0.2.1
 
