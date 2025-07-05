@@ -1,4 +1,4 @@
-Reddit Sentiment Tracker with GenAI Summarization & PDF Report
+**Reddit Sentiment Tracker with GenAI Summarization & PDF Report
 
 A Python-based application that performs sentiment analysis on the top Reddit posts from any subreddit, generates a visual sentiment distribution chart, summarizes top comments using a pre-trained GenAI model, and compiles a professional PDF report of the analysis.
 
